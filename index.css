@@ -76,7 +76,7 @@ body {
 /* ================= Sections ================= */
 section {
   display: none;
-  padding: 80px 20px;
+  padding: 10px 10px;
   min-height: 100vh;
   background: #fff;
   animation: fadeIn 0.5s ease-in-out;
