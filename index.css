@@ -28,7 +28,7 @@ body {
 }
 
 .logo img {
-  height:100px;
+  height: 100px;
   cursor: pointer;
 }
 
@@ -91,7 +91,7 @@ section.active {
   to { opacity: 1; }
 }
 
-/* ================= Hero ================= */
+/* ================= Hero Section ================= */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +151,6 @@ section.active {
 .hero-content button:hover {
   background-color: #222d5e;
   color: white;
-  
 }
 
 /* Animate-pop Animation */
@@ -164,7 +163,7 @@ section.active {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* ================= Client ================= */
+/* ================= Client Section ================= */
 .client {
   text-align: center;
   padding: 40px 20px;
@@ -183,7 +182,7 @@ section.active {
   line-height: 1.6;
 }
 
-/* ================= Cards ================= */
+/* ================= Cards Section ================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -206,8 +205,8 @@ section.active {
 }
 
 .card-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   margin-bottom: 15px;
   border-radius: 50%;
@@ -231,7 +230,7 @@ section.active {
   color: #555;
 }
 
-/* ================= About ================= */
+/* ================= About Section ================= */
 .about {
   display: flex;
   flex-direction: column;
@@ -280,7 +279,49 @@ section.active {
   line-height: 1.5;
 }
 
-/* ================= Form ================= */
+/* ================= Services Section ================= */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 60px;
+  justify-content: center;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 25px 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= Contact Form Section ================= */
 .contact-form {
   background: #fff;
   padding: 30px;
@@ -328,9 +369,9 @@ section.active {
   display: none;
 }
 
-/* Popup Overlay */
+/* ================= Popup ================= */
 .popup-overlay {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -342,7 +383,6 @@ section.active {
   z-index: 1000;
 }
 
-/* Popup Box */
 .popup-box {
   background: #fff;
   padding: 40px 30px;
@@ -352,7 +392,6 @@ section.active {
   animation: popUp 0.4s ease forwards;
 }
 
-/* Popup Text */
 .popup-box h2 {
   color: #003366;
   margin-bottom: 10px;
@@ -364,7 +403,6 @@ section.active {
   margin-bottom: 20px;
 }
 
-/* OK Button */
 .popup-box button {
   background-color: #003366;
   color: white;
@@ -380,7 +418,6 @@ section.active {
   background-color: #0059b3;
 }
 
-/* Animation */
 @keyframes popUp {
   0% {
     transform: scale(0.8);
@@ -392,7 +429,7 @@ section.active {
   }
 }
 
-/* ================= Partners ================= */
+/* ================= Partners Section ================= */
 .partners-container {
   display: flex;
   flex-wrap: wrap;
@@ -433,11 +470,11 @@ section.active {
   margin: 10px 10px 20px 10px;
 }
 
-/* ================= Footer ================= */
+/* ================= Footer Section ================= */
 footer {
   background-color: #003366;
   color: #fff;
-  padding: 12px 10px; /* compact height */
+  padding: 12px 10px;
   text-align: center;
 }
 
@@ -445,23 +482,20 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  flex-wrap: wrap;
   gap: 25px;
 }
 
-/* Logo */
 .footer-content .logo img {
   width: 70px;
   height: auto;
 }
 
-/* Copyright and text */
 .footer-content p {
   margin: 0;
   font-size: 0.85rem;
 }
 
-/* Email + Support */
 .footer-content .emails a {
   color: #fff;
   text-decoration: underline;
@@ -469,7 +503,6 @@ footer {
   margin: 0 5px;
 }
 
-/* Social Media Icons */
 .footer-content .social-media {
   display: flex;
   justify-content: center;
@@ -487,42 +520,26 @@ footer {
   transform: scale(1.1);
 }
 
-/* ========== Responsive Styles ========== */
-@media (max-width: 1024px) {
-  .footer-content {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+/* ================= Miscellaneous Classes ================= */
+.ourservices  {
+   color:#0056b3;
+   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .footer-content p,
-  .footer-content .emails a {
-    font-size: 0.8rem;
-  }
+.partners1{
+  text-align: center;
 }
 
-@media (max-width: 480px) {
-  .footer-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
+#ptnr1{
+  color: #0c4684;
+}
 
-  .footer-content .logo img {
-    width: 60px;
-  }
+.careers{
+  text-align: center;
+}
 
-  .footer-content .social-media img {
-    width: 22px;
-    height: 22px;
-  }
+#c1{
+  color: #b12d2d;
 }
 
 /* ================= Responsive Navbar ================= */
@@ -548,21 +565,59 @@ footer {
     display: flex;
   }
 }
-/* =============== */
-.ourservices  {
-   color:#0056b3;
-  text-align: center;
+
+/* ================= Responsive Grid & Footer ================= */
+@media (max-width: 1440px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-   
-.partners1{
-text-align: center;
+
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-content {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 }
-#ptnr1{
-  color: #0c4684;
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-content p,
+  .footer-content .emails a {
+    font-size: 0.8rem;
+  }
 }
-.careers{
-  text-align: center;
-}
-#c1{
-  color: #b12d2d;
+
+@media (max-width: 480px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer-content .logo img {
+    width: 60px;
+  }
+
+  .footer-content .social-media img {
+    width: 22px;
+    height: 22px;
+  }
 }
