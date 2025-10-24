@@ -622,3 +622,19 @@ footer {
     height: 22px;
   }
 }
+
+#gdnt{
+  
+          font-size: 3rem;
+           background: url("./assets/gdntcolor.jpg") center;
+           background-size: cover;
+           background-clip: text;
+           color: transparent; 
+           animation: animate 3s linear infinite;
+        }
+        @keyframes animate{
+            to{
+                background-position-x:500px ;
+            }
+        
+}
